@@ -21,6 +21,16 @@ app.use('/uploads', express.static(__dirname + '/uploads'));
 
 mongoose.connect('mongodb+srv://blog:M5ffxCAnAQrSPRGY@cluster0.roqnv0k.mongodb.net/');
 
+//--------------------------------
+app.use(cors (
+{
+origin: ["https://deploy-mern-1whq.vercel.app"], 
+    methods: ["POST", "GET"], 
+    credentials: true
+}
+));
+//------------------------
+
 app.post('/register', async (req,res) => {
     const {username,password} = req.body;
     try{
