@@ -6,9 +6,8 @@ import { LogOut } from "lucide-react";
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
-import { isTeacher } from "@/lib/teacher";
-
-import { SearchInput } from "./search-input";
+// import { isTeacher } from "@/lib/teacher";
+// import { SearchInput } from "./search-input";
 
 export const NavbarRoutes = () => {
   const { userId } = useAuth();
@@ -22,7 +21,7 @@ export const NavbarRoutes = () => {
     <>
       {isSearchPage && (
         <div className="hidden md:block">
-          <SearchInput />
+          {/* <SearchInput /> */}
         </div>
       )}
       <div className="flex gap-x-2 ml-auto">
@@ -33,12 +32,12 @@ export const NavbarRoutes = () => {
               Exit
             </Button>
           </Link>
-        ) : isTeacher(userId) ? (
-          <Link href="/teacher/courses">
-            <Button size="sm" variant="ghost">
-              Teacher mode
-            </Button>
-          </Link>
+        // ) : isTeacher(userId) ? (
+        //   <Link href="/teacher/courses">
+        //     <Button size="sm" variant="ghost">
+        //       Teacher mode
+        //     </Button>
+        //   </Link>
         ) : null}
         <UserButton
           afterSignOutUrl="/"
