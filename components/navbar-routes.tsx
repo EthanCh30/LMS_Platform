@@ -7,6 +7,7 @@ import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
 import { isTeacher } from "@/lib/teacher";
+
 import { SearchInput } from "./search-input";
 
 export const NavbarRoutes = () => {
