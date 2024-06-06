@@ -1,12 +1,12 @@
 "use client";
 
 import {
-    Bar,
-    BarChart,
-    ResponsiveContainer,
-    XAxis,
-    YAxis,
-  } from "recharts";
+  Bar,
+  BarChart,
+  ResponsiveContainer,
+  XAxis,
+  YAxis,
+} from "recharts";
 
 import { Card } from "@/components/ui/card";
 
@@ -27,13 +27,13 @@ export const Chart = ({
           <XAxis
             dataKey="name"
             stroke="#888888"
-            fontSize={12}
+            // fontSize={12}
             tickLine={false}
             axisLine={false}
           />
           <YAxis
             stroke="#888888"
-            fontSize={12}
+            // fontSize={12}
             tickLine={false}
             axisLine={false}
             tickFormatter={(value: any) => `$${value}`}
@@ -46,5 +46,5 @@ export const Chart = ({
         </BarChart>
       </ResponsiveContainer>
     </Card>
-  )
-}
+  );
+};
